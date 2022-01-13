@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="950" viewBox="0 0 3009 1724">
+  <defs>
+    <style>
+      .a {
+        fill: none;
+        stroke: #070808;
+        stroke-miterlimit: 10;
+      }
+
+      .b {
+        font-size: 72px;
+        font-family: Optima-Regular, Optima;
+      }
+
+      .c {
+        letter-spacing: -0.045em;
+      }
+    </style>
+  </defs>
+  <image width="3009" height="1724" xlink:href="website_photo_2c.png"/>
+  <path class="a" d="M302.4376,720.4578H-87.866c-122.8456,0-222.4315-93.7592-222.4315-209.4169v-40.85a199.433,199.433,0,0,1,32.6236-109.226L-425.92,284.5447l182.9758,35.54c40.067-36.6982,94.7639-59.31,155.0785-59.31H302.4376c122.8455,0,222.4315,93.7593,222.4315,209.417v40.85C524.8691,626.6986,425.2831,720.4578,302.4376,720.4578Z" transform="translate(1361 718)"/>
+  <text class="b" transform="translate(1199.3286 1161.5781)"><tspan class="c">T</tspan><tspan x="36.792" y="0">his page looks </tspan><tspan x="0" y="86.4004">better in landscape</tspan></text>
+</svg>

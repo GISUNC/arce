@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="50" viewBox="0 0 3009 1724">
+  <defs>
+    <style>
+      .a {
+        fill: blue;
+        stroke: #070808;
+        stroke-miterlimit: 10;
+        z-index: 10;
+      }
+    </style>
+  </defs>
+  <!-- <image width="3009" height="1724" xlink:href="website_photo_2c.png"/> -->
+  <path class="a" d="M304.6521-179.25H-85.6515c-122.8456,0-222.4314,95.3025-222.4314,212.8639v41.522A205.1162,205.1162,0,0,0-275.4593,186.16l-148.2464,77.6785,182.9757-36.125C-200.6629,265.0156-145.9661,288-85.6515,288H304.6521c122.8456,0,222.4315-95.3025,222.4315-212.8639V33.6141C527.0836-83.9473,427.4977-179.25,304.6521-179.25Z" transform="translate(1361 718)"/>
+</svg>

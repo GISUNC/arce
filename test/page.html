@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=2, minimum-scale=1" />
+    <link rel="icon" href="photo/my_favicon.png">
+    <title>My Pagina</title>
+
+<style>
+html {
+    /* overflow-y: auto; */
+  /* // Minimum 16x, and grows more slowly 
+  // (half the rate of screen growth) */
+  /* font-size: calc(1em + 0.5vw); */
+  
+  /* // Line-height based on font-size,
+  // with addition viewport-relative growth */
+  /* line-height: calc(1.1em + 0.5vw); */
+  /* margin: 0.5em; */
+    }
+
+
+/* body {
+    width: 100%;
+    height: 100%;
+} */
+    div {
+  position: absolute;
+  padding: 0%;
+  overflow:auto;
+  /* -webkit-appearance: none; */
+  /* appearance: none; */
+  /* width: 75%; */
+  /* height: 75%; */
+ 
+    }
+
+    img{
+        width:100%;
+        /* height: 100%; */
+    }
+     #container {
+         
+          width: 100%;
+          height: 100%;
+          top: 0%;
+          left:0%;
+          position: absolute;
+          background-color:#FFF;
+        }
+        #img1, #img2 {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          background-color:#FFF;
+          display: inline-block; 
+          overflow-y: hidden;
+
+    }
+        #img1 {
+            z-index: 1;
+        }
+        #info {
+    
+            /* overflow-x: scroll; */
+            top: 7vw;
+            height: 100%;
+            /* height: 10em; */
+            /* margin-top: 7vw; */
+            right: 10%;
+            left: 40%;
+            max-height: 80%;
+            /* background-color:white; */
+            position: absolute;
+            z-index: 2;
+
+            
+        }
+
+        li {
+            /* font-size: .5rem; */
+            font-size: 3.5vw;
+            /* font-size-adjust: none; */
+            font-family: Monaco;
+            margin-top: 1%;
+            margin-left: 10%;
+            margin-right: 3%;
+            /* max-height: 200px; */
+                  }
+        #myName {
+          
+            font-family: Monaco;
+            font-size: 4vw;
+            /* font-size-adjust: initial; */
+            left: 35%;
+            top: 1vw;
+            position: absolute;
+            z-index: 3;
+        }
+
+.mibob {
+                  stroke: #070808;
+                  stroke-miterlimit: 10;
+                  fill:red;
+                }
+
+</style>
+</head>
+<!-- 
+    <div><h1>Welcome to my page</h1>
+    <h2>Javier A. Arce-Nazario</h2> -->
+    
+    <!-- </div> -->
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="-80 -45 500 500"
+    style="z-index: 6; 
+    fill-opacity: 80%;
+    fill: gray; position: absolute;"
+    >
+        <path d="M66.1 1.5C30.4 1.5 1.5 22.9 1.5 46c0 18.1 17.9 33.5 42.8 39.3 1.5 14.8-1.3 39-8.5 48.1 10.8-12.5 22.4-33.6 26.6-45.7 1.2 0 2.5.1 3.7.1 35.7 0 64.6-18.7 64.6-41.8S101.8 1.5 66.1 1.5zM35.8 133.4c-.3.4-.7.8-1 1.1.4-.3.7-.7 1-1.1z"/>
+    </svg> -->
+        
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 3009 1724" width="940" style="z-index: 2; position: absolute; pointer-events:bounding-box";>
+            <path class="mibob" d="M304.6521-179.25H-85.6515c-122.8456,0-222.4314,95.3025-222.4314,212.8639v41.522A205.1162,205.1162,0,0,0-275.4593,186.16l-148.2464,77.6785,182.9757-36.125C-200.6629,265.0156-145.9661,288-85.6515,288H304.6521c122.8456,0,222.4315-95.3025,222.4315-212.8639V33.6141C527.0836-83.9473,427.4977-179.25,304.6521-179.25Z" transform="translate(1361 1250) scale(1,-1)"/>
+          </svg> -->
+   
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="elSVG" width="940" viewBox="0 0 3009 1724" style="z-index: 2; position: absolute; pointer-events:bounding-box">
+            <defs>
+              <style>
+                .a {
+                  fill: none;
+                  stroke: #070808;
+                  stroke-miterlimit: 10;
+                }
+          
+                .b {
+                  font-size: 72px;
+                  font-family: Optima-Regular, Optima;
+                }
+          
+                .c {
+                  letter-spacing: -0.045em;
+                }
+              </style>
+            </defs>
+            <g id="borbuja">
+            <!-- <image width="3009" height="1724" xlink:href="website_photo_2c.png"/> -->
+            <path class="a" d="M302.4376,720.4578H-87.866c-122.8456,0-222.4315-93.7592-222.4315-209.4169v-40.85a199.433,199.433,0,0,1,32.6236-109.226L-425.92,284.5447l182.9758,35.54c40.067-36.6982,94.7639-59.31,155.0785-59.31H302.4376c122.8455,0,222.4315,93.7593,222.4315,209.417v40.85C524.8691,626.6986,425.2831,720.4578,302.4376,720.4578Z" transform="translate(1361 718)"/>
+            <text class="b" transform="translate(1199.3286 1161.5781)"><tspan class="c">T</tspan><tspan x="36.792" y="0">his page looks </tspan><tspan x="0" y="86.4004">better in landscape</tspan></text>
+            </g>
+        </svg>
+
+        <div id="myName">Javier A. Arce-Nazario</div>
+    <div id="container">
+        <div id="info" class="info" >
+            
+            <!-- <li>my awards</li> -->
+
+            <li>my classes</li>
+            <!-- <li><a href="https://github.com/maparce">my code</a></li> -->
+            <li>my CV</li>
+            <!-- <li>my exhibits</li> -->
+            <li id="myFace" onclick="laCaraChange()">my face</li>
+            <!-- <li>my fascination</li> -->
+            <li>my research</li>
+            <!-- <li>my videos</li> -->
+            
+        </div>
+        <!-- <section style="z-index: 4;">
+            <blockquote class="speech bubble">Did someone say <em>chimichangas?</em></blockquote>
+          </section> -->
+        <div id="img1">
+            <img  src="photo/website_photo_2c.png"><img/>
+        </div>
+        <div id="img2" class="item">
+            <img  src="photo/website_photo_prj2.png"><img/>
+        </div>
+        
+    </div>
+
+
+<script>
+    document.getElementById("borbuja").style.opacity = 0;
+    var laCara = 0;    
+    function laCaraChange()
+    {   
+        // document.getElementById("info").style.zIndex = 1;
+        document.getElementById("img1").style.opacity = laCara;
+        if(laCara ==1){laCara = 0} else{laCara = 1};
+    }
+
+    function elScreen() { if (window.innerHeight > window.innerWidth)
+    {document.getElementById("elSVG").setAttribute("width", laImagen.clientWidth);
+    if(screen.orientation.angle == 0){
+        document.getElementById("borbuja").style.opacity = 1;
+} else {document.getElementById("borbuja").style.opacity = 0;}
+}}
+// Listen for orientation changes
+window.addEventListener("orientationchange", function(event) {
+    elScreen() 
+    location.reload()
+  console.log("the orientation of the device is now " + event.target.screen.orientation.angle);
+});
+
+const laImagen = document.getElementById("img1");
+elScreen() 
+
+if(screen.innerHeight > screen.innerWidth){
+    alert("Please use Landscape!");
+}
+</script>
+</body>
+</html>
