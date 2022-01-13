@@ -191,10 +191,11 @@ html {
 
     function elScreen() { if (window.innerHeight > window.innerWidth)
     {document.getElementById("elSVG").setAttribute("width", laImagen.clientWidth);
-    if(screen.orientation.angle == 0){
+    // if(screen.orientation.angle == 0){
         document.getElementById("borbuja").style.opacity = 1;
 } else {document.getElementById("borbuja").style.opacity = 0;}
-}}
+}
+// }
 // Listen for orientation changes
 window.addEventListener("orientationchange", function(event) {
     elScreen() 
