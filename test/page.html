@@ -21,20 +21,13 @@ html {
     }
 
 
-/* body {
-    width: 100%;
-    height: 100%;
-} */
-    div {
+
+    /* .cara {
   position: absolute;
   padding: 0%;
   overflow:auto;
-  /* -webkit-appearance: none; */
-  /* appearance: none; */
-  /* width: 75%; */
-  /* height: 75%; */
  
-    }
+    } */
 
     img{
         width:100%;
@@ -49,16 +42,16 @@ html {
           position: absolute;
           background-color:#FFF;
         }
-        #img1, #img2 {
+        #dimg1, #dimg2 {
           width: 100%;
           height: 100%;
           position: absolute;
           background-color:#FFF;
           display: inline-block; 
-          overflow-y: hidden;
+          /* overflow-y: hidden; */
 
     }
-        #img1 {
+        #dimg1 {
             z-index: 1;
         }
         #info {
@@ -76,6 +69,11 @@ html {
             z-index: 2;
 
             
+        }
+        #infoDIV {
+          width: 100%;
+          height: 100%;
+          left:0%;
         }
 
         li {
@@ -146,11 +144,11 @@ html {
             <g id="borbuja">
             <!-- <image width="3009" height="1724" xlink:href="website_photo_2c.png"/> -->
             <path class="a" d="M302.4376,720.4578H-87.866c-122.8456,0-222.4315-93.7592-222.4315-209.4169v-40.85a199.433,199.433,0,0,1,32.6236-109.226L-425.92,284.5447l182.9758,35.54c40.067-36.6982,94.7639-59.31,155.0785-59.31H302.4376c122.8455,0,222.4315,93.7593,222.4315,209.417v40.85C524.8691,626.6986,425.2831,720.4578,302.4376,720.4578Z" transform="translate(1361 718)"/>
-            <text class="b" transform="translate(1199.3286 1161.5781)"><tspan class="c">T</tspan><tspan x="36.792" y="0">his page looks </tspan><tspan x="0" y="86.4004">better in landscape</tspan></text>
+            <text class="b" transform="translate(1199.3286 1161.5781)"><tspan class="c">T</tspan><tspan x="36.792" y="0">his page looks </tspan><tspan x="0" y="86.4004">better in portrait</tspan></text>
             </g>
         </svg>
 
-        <div id="myName">Javier A. Arce-Nazario</div>
+        <div id="myName" >Javier A. Arce-Nazario</div>
     <div id="container">
         <div id="info" class="info" >
             
@@ -169,27 +167,33 @@ html {
         <!-- <section style="z-index: 4;">
             <blockquote class="speech bubble">Did someone say <em>chimichangas?</em></blockquote>
           </section> -->
-        <div id="img1">
-            <img  src="photo/website_photo_2c.png"><img/>
+        <div id="dimg1">
+            <img  id="img1" src="photo/website_photo_2c.png"><img/>
         </div>
-        <div id="img2" class="item">
-            <img  src="photo/website_photo_prj2.png"><img/>
+        <div id="dimg2" class="item">
+            <img  id="img2" src="photo/website_photo_prj2.png"><img/>
         </div>
         
     </div>
-
+<div id="infoDIV" style="position:absolute ; background-color: red; z-index: 4;">Hola</div>
 
 <script>
-    document.getElementById("borbuja").style.opacity = 0;
+const laImagen = document.getElementById("img1");
+
+document.getElementById("borbuja").style.opacity = 0;
+//make the container be the same size as the image
+document.getElementById("info").style.height = Math.trunc(laImagen.getBoundingClientRect().bottom - document.getElementById("info").getBoundingClientRect().y) +'px'
+
+
     var laCara = 0;    
     function laCaraChange()
     {   
         // document.getElementById("info").style.zIndex = 1;
-        document.getElementById("img1").style.opacity = laCara;
+        document.getElementById("dimg1").style.opacity = laCara;
         if(laCara ==1){laCara = 0} else{laCara = 1};
     }
 
-    function elScreen() { if (window.innerHeight > window.innerWidth)
+    function elScreen() { if (window.innerHeight < window.innerWidth)
     {document.getElementById("elSVG").setAttribute("width", laImagen.clientWidth);
     // if(screen.orientation.angle == 0){
         document.getElementById("borbuja").style.opacity = 1;
@@ -200,15 +204,36 @@ html {
 window.addEventListener("orientationchange", function(event) {
     elScreen() 
     location.reload()
+    infoDIV()
   console.log("the orientation of the device is now " + event.target.screen.orientation.angle);
 });
 
-const laImagen = document.getElementById("img1");
-elScreen() 
+window.addEventListener("resize", function(event) {
+    elScreen() 
+    document.getElementById("elSVG").setAttribute("width", laImagen.clientWidth)
+    location.reload()
+    infoDIV() 
+  console.log("proportion is");
+});
 
-if(screen.innerHeight > screen.innerWidth){
-    alert("Please use Landscape!");
-}
+// function works with divs but not with images
+function getXY(id) {
+  var X=window.getComputedStyle(id,null).getPropertyValue('left');
+  var Y=window.getComputedStyle(id,null).getPropertyValue('top')
+  return [X,Y]
+};
+
+function  infoDIV() {document.getElementById("infoDIV").style.top = laImagen.getBoundingClientRect().height+"px"}
+
+document.getElementById("elSVG").setAttribute("width", laImagen.clientWidth)
+elScreen() 
+window.onload = (event) => {infoDIV()};
+
+/// make headings in the infoDIV for classes CV research 
+/// make the clicking of the info make the word dark and scroll to the section if it is not in portrait. 
+
+
+
 </script>
 </body>
 </html>
